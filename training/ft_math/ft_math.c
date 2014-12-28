@@ -6,15 +6,15 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/27 18:22:13 by glafitte          #+#    #+#             */
-/*   Updated: 2014/12/27 18:43:21 by glafitte         ###   ########.fr       */
+/*   Updated: 2014/12/28 18:38:03 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_math.h"
 
-char	*ft_add(int a, int b)
+char	*ft_add(double a, double b)
 {
-	int		value;
+	double	value;
 	char	*result;
 
 	value = a + b;
@@ -22,9 +22,9 @@ char	*ft_add(int a, int b)
 	return (result);
 }
 
-char	*ft_sub(int a, int b)
+char	*ft_sub(double a, double b)
 {
-	int		value;
+	double	value;
 	char	*result;
 
 	value = a - b;
@@ -32,9 +32,9 @@ char	*ft_sub(int a, int b)
 	return (result);
 }
 
-char	*ft_mult(int a, int b)
+char	*ft_mult(double a, double b)
 {
-int		value;
+	double	value;
 	char	*result;
 
 	value = a * b;
@@ -42,9 +42,9 @@ int		value;
 	return (result);
 }
 
-char	*ft_divise(int a, int b)
+char	*ft_divise(double a, double b)
 {
-	int		value;
+	double	value;
 	char	*result;
 
 	value = a / b;

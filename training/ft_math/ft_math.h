@@ -6,7 +6,7 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/27 18:22:38 by glafitte          #+#    #+#             */
-/*   Updated: 2014/12/27 18:42:35 by glafitte         ###   ########.fr       */
+/*   Updated: 2014/12/28 18:38:15 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 
 typedef struct	s_math
 {
-	char		*(*func_ptr)(int a, int b);
+	char		*(*func_ptr)(double a, double b);
 	char		key;
 }				t_math;
 
-char	*ft_add(int a, int b);
-char	*ft_sub(int a, int b);
-char	*ft_mult(int a, int b);
-char	*ft_divise(int a, int b);
+char	*ft_add(double a, double b);
+char	*ft_sub(double a, double b);
+char	*ft_mult(double a, double b);
+char	*ft_divise(double a, double b);
+double ft_atof(char *str);
 
 #endif

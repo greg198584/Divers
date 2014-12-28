@@ -6,7 +6,7 @@
 #    By: glafitte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/14 08:37:45 by glafitte          #+#    #+#              #
-#    Updated: 2014/12/27 18:42:33 by glafitte         ###   ########.fr        #
+#    Updated: 2014/12/28 17:53:39 by glafitte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ CFLAGS = -Wall -Werror -Wextra -O3 -g
 LIBFT = libft/
 SRCS =	ft_math.c \
 		main.c \
+		ft_convers.c \
 		\
 
 OBJ = $(SRCS:.c=.o)
