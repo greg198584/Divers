@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/12/16 15:46:33 by glafitte          #+#    #+#             */
-/*   Updated: 2014/12/16 15:47:06 by glafitte         ###   ########.fr       */
+/*   Created: 2014/11/07 16:46:42 by glafitte          #+#    #+#             */
+/*   Updated: 2014/11/07 16:48:39 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(void)
+#include "libft.h"
+#include <unistd.h>
+
+void	ft_putendl_fd(char const *s, int fd)
 {
-	return (0);
+	write(fd, s, ft_strlen(s));
+	ft_putchar_fd('\n', fd);
 }
