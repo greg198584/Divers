@@ -6,7 +6,7 @@
 /*   By: hamza <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/27 15:16:34 by hamza             #+#    #+#             */
-/*   Updated: 2014/09/27 15:18:04 by hamza            ###   ########.fr       */
+/*   Updated: 2015/01/16 10:28:52 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(int argc , char **argv)
 {
 	if (argc < 2)
 	{
-		ft_printf("Erreur\n");
+		ft_putendl_fd("Erreur\n", 2);
 		return (0);
 	}
 	sastantua(ft_atoi(argv[1]));

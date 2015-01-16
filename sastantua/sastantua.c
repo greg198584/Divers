@@ -6,12 +6,11 @@
 /*   By: hamza <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/27 22:06:14 by hamza             #+#    #+#             */
-/*   Updated: 2014/09/28 00:58:23 by hamza            ###   ########.fr       */
+/*   Updated: 2015/01/16 10:28:22 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sastantua.h"
-#include <stdio.h>
 
 void	write_door(int *i, int *width_door, int space, int size_door)
 {
