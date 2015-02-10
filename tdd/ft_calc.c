@@ -6,7 +6,7 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/27 18:23:00 by glafitte          #+#    #+#             */
-/*   Updated: 2014/12/28 18:38:57 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/10 12:39:36 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,32 @@ t_math tab[] =
 {
 	{&ft_add, '+'},
 	{&ft_sub, '-'},
-	{&ft_mult, 'x'},
+	{&ft_mult, '*'},
 	{&ft_divise, '/'},
+	{&ft_modulo, '%'},
 	{NULL, -1}
 };
 
-int	main(int argc, char **argv)
+int	ft_calc(char *calcul)
 {
-	double	value_1;
-	double	value_2;
+	int		value_1;
+	int		value_2;
+	char	**argv;
 	int		i;
-	char	*result;
+	int		result;
 
-	if (argc != 4)
-	{
-		ft_putendl("erreur rentre un calcul [ ex : 4 + 2 ]");
-		return (0);
-	}
 	i = -1;
-	value_1 = ft_atof(argv[1]);
-	value_2 = ft_atof(argv[3]);
+	if (ft_strchr(calcul, ' ') == NULL)
+		return (0);
+	argv = ft_strsplit(calcul, ' ');
+	value_1 = ft_atoi(argv[0]);
+	value_2 = ft_atoi(argv[2]);
 	while (tab[++i].key != -1)
 	{
-		if (tab[i].key == argv[2][0])
+		if (tab[i].key == argv[1][0])
 		{
-			result = ft_strdup(tab[i].func_ptr(value_1, value_2));
-			ft_putendl(result);
-			return (0);
+			result = tab[i].func_ptr(value_1, value_2);
+			return (result);
 		}
 	}
 	return (0);
