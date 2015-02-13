@@ -6,24 +6,27 @@
 /*   By: glafitte <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/10 11:28:31 by glafitte          #+#    #+#             */
-/*   Updated: 2015/02/10 12:56:33 by glafitte         ###   ########.fr       */
+/*   Updated: 2015/02/11 12:57:39 by glafitte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <moulitest.h>
 #include <string.h>
 
-int	ft_strcmp(char const *s1, char const *s2);
+int			ft_calc(char *calcul);
 
-static void	string_cmp(t_test *test)
+static void	simple_calcul(t_test *test)
 {
-	char	*s1 = "coucou";
-	char	*s2 = "coucou";
+	mt_assert(ft_calc("4 + 4") == 8);
+}
 
-	mt_assert(ft_strcmp(s1, s2) == strcmp(s1, s2));
+static void	simple_calcul_2(t_test *test)
+{
+	mt_assert(ft_calc("4+2") == 0);
 }
 
 void		suite_ft_calc(t_suite *suite)
 {
-	SUITE_ADD_TEST(suite, string_cmp);
+	SUITE_ADD_TEST(suite, simple_calcul);
+	SUITE_ADD_TEST(suite, simple_calcul_2);
 }
