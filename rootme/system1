@@ -1,4 +1,0 @@
-cp de ls renommer cat dans /dev/shm
-retour dans le dossier ou le binaire ce trouve.
-changer le path pour diriger ver /dev/shm
-et executer le binaire qui nous affiche le fichier .passwd
